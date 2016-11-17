@@ -6,7 +6,7 @@ $(".card__button").click(function(t){t.preventDefault(),$(".front").hide(),$(".g
 
 
 
-$(".question__button--yes").click(function(t){t.preventDefault(),$(".question").fadeOut("fast")});
+$(".question__button--yes").click(function(t){t.preventDefault(),$(".question").hide(),$(".front").fadeIn("fast")});
 
 
 
