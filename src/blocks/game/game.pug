@@ -1,0 +1,11 @@
+mixin game(additionalClass)
+  .game(class=additionalClass)
+    .game__objects
+      .game__chocolate
+      .game__hop-vertical
+      .game__hop
+      .game__bottle
+    .game__location.game__location--first
+      +slots('game__slots')
+      +card-game
+      +game-popup
