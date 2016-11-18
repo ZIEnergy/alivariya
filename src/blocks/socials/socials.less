@@ -3,9 +3,11 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 100%;
   bottom: 10rem;
   z-index: 9;
+  width: 50rem;
+  left: 50%;
+  margin-left: -25rem;
   
   &__item {
     
@@ -39,6 +41,48 @@
       background-size: cover;
       width: 4.1rem;
       height: 5.6rem;
+    }
+  }
+  
+  &--gold {
+    position: static;
+    z-index: 0;
+    width: auto;
+    
+    .socials__item {
+      display: block;
+    
+      &:nth-child(n+2) {
+        margin-left: 20rem
+      }
+
+      &--fb {
+        background: url(../img/social-fb-gold.png) no-repeat;
+        background-size: cover;
+        width: 5.7rem;
+        height: 8.6rem;
+      }
+
+      &--vk {
+        background: url(../img/social-vk-gold.png) no-repeat;
+        background-size: cover;
+        width: 10.7rem;
+        height: 6.7rem;
+      }
+
+      &--twitter {
+        background: url(../img/social-twitter-gold.png) no-repeat;
+        background-size: cover;
+        width: 9.1rem;
+        height: 7.9rem;
+      }
+
+      &--ok {
+        background: url(../img/social-ok-gold.png) no-repeat;
+        background-size: cover;
+        width: 5.7rem;
+        height: 7.9rem;
+      }
     }
   }
 }

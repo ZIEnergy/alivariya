@@ -35,12 +35,12 @@ gulp.task('clean', function () {
 gulp.task('images', function() {
   gulp.src(['./src/images/*','./src/images/**/*','./src/blocks/**/images/*'])
     .pipe(rename({dirname: ''}))
-    .pipe(imagemin({
-      progressive: true,
-      optimizationLevel: 7
-    }))
+//    .pipe(imagemin({
+//      progressive: true,
+//      optimizationLevel: 7
+//    }))
     .pipe(gulp.dest('./build/img'))
-    .pipe(browserSync.reload({stream:true}));
+//    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('templates', function () {

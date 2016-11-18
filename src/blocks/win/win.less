@@ -1,3 +1,52 @@
 .win {
+  background: url(../img/win-bg.jpg) no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 9.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
   
+  &__logo {
+    width: 25.8rem;
+    height: 17.6rem;
+  }
+  
+  &__header {
+    margin: 6.7rem 0 5.4rem;
+    background: url(../img/win-header.png) no-repeat;
+    background-size: cover;
+    width: 32.5rem;
+    height: 7.2rem;
+  }
+  
+  &__result {
+    text-shadow: 0 .3rem .87rem rgba(0, 0, 0, 0.72);
+    color: #fff;
+    font-size: 6.5rem;
+    font-family: @font-fancy;
+    display: flex;
+  }
+  
+  &__result-number {
+    font-weight: 700;
+    margin: 0 2rem;
+  }
+  
+  &__socials {
+    margin: 6.1rem 0 4.4rem;
+  }
+  
+  &__text {
+    font-family: @font-regular;
+    font-size: 2.5rem;
+    color: #fff;
+    line-height: 5.3rem;
+    text-align: center;
+  }
 }

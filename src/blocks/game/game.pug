@@ -1,13 +1,33 @@
 mixin game(additionalClass)
   .game(class=additionalClass)
-    .game__objects
-      .game__chocolate
-      .game__hop-vertical
-      .game__hop
-      .game__bottle
-    .game__location.game__location--first
-      +slots('game__slots')
+    +game-popup
+    //.game__location.game__location--first
+      //+slots('game__slots')
       +card-game
-      +game-popup
       .game__ingredients-container
-        a.game__ingredient.game__ingredient--correct.game__ingredient--shato(href="#", data-picture="item-shato.png", date-header="Солад Шато Шакалад", date-text="Усё правільна: абсмажаны пры высокіх тэмпературах да цёмна-карычневага колеру, гэты солад надае піву лёгкі арамат смажаных арэхаў і шакаладу.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--calendar(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--address(href="#", data-picture="item-recipe.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--recipe(href="#", data-picture="item-calendar.png", data-header="Рэцэпт піва ад еўрапейскіх півавараў", data-text="У Еўропе здаўна да Каляд выпускаецца лімітаваная серыя шакаладнага піва. Варта вывучыць іх вопыт!")
+        a.game__ingredient.game__ingredient--incorrect.game__ingredient--xerox(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--incorrect.game__ingredient--book(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--incorrect.game__ingredient--chair(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+    //.game__location.game__location--second
+      //+slots('game__slots')
+      +card-game
+      .game__ingredients-container
+        a.game__ingredient.game__ingredient--correct.game__ingredient--malt(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--hops(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--shato(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--tangerines(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--nuts(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--cacao(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+    .game__location.game__location--third
+      //+slots('game__slots')
+      +card-game
+      .game__ingredients-container
+        a.game__ingredient.game__ingredient--correct.game__ingredient--star(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--sock(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--sphere(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--shadow(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--lamp(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
+        a.game__ingredient.game__ingredient--correct.game__ingredient--puddle(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
