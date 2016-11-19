@@ -32,21 +32,11 @@ $('.game-popup__close').click(function(e) {
   if(!$('.slots__item').hasClass("slots__item--empty")) {
     $('.message').fadeIn('fast');
     $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
-    if($(this).parents('.game__location').hasClass("game__location--third")) {
-      alert('test');
-//      $('.game').hide();
-//      $('.win').fadeIn('fast').css('display', 'flex');
-    }
-  };
-});
-
-$('.game__location--third').find('.game-popup__close').click(function(e) {
-  e.preventDefault();
-  if(!$('.slots__item').hasClass("slots__item--empty")) {
-//    alert('test');
+    if($('.game__location--third').is(':visible')) {
       $('.game').hide();
       $('.win').fadeIn('fast').css('display', 'flex');
-  }
+    };
+  };
 });
 
 $('.message__close').click(function() {
