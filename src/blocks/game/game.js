@@ -2,8 +2,8 @@ $('.game__ingredient').click(function(e) {
   e.preventDefault();
   $('.game-popup__picture').attr('src', 'img/' + $(this).data('picture'));
   $('.game-popup__header').text($(this).data('header'));
-  $('.game-popup__text').text($(this).data('text'));
-  $('.game-popup').fadeIn('fast').css('display', 'flex');
+  $('.game-popup__text--ingredient').text($(this).data('text'));
+  $('.game-popup--ingredient').fadeIn('fast').css('display', 'flex');
   if(!$('.slots__item').hasClass("slots__item--empty")) {
     $(this).parents('.game__location').hide();
   }
@@ -30,8 +30,35 @@ $('.game-popup__close').click(function(e) {
   e.preventDefault();
   $('.game-popup').fadeOut('fast');
   if(!$('.slots__item').hasClass("slots__item--empty")) {
-    $('.game__location--visible').hide();
-    $('.game__location--hidden').first().removeClass('game__location--hidden').fadeIn('fast').addClass('game__location--visible');
+    $('.message').fadeIn('fast');
     $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
+    if($(this).parents('.game__location').hasClass("game__location--third")) {
+      alert('test');
+//      $('.game').hide();
+//      $('.win').fadeIn('fast').css('display', 'flex');
+    }
   };
+});
+
+$('.game__location--third').find('.game-popup__close').click(function(e) {
+  e.preventDefault();
+  if(!$('.slots__item').hasClass("slots__item--empty")) {
+//    alert('test');
+      $('.game').hide();
+      $('.win').fadeIn('fast').css('display', 'flex');
+  }
+});
+
+$('.message__close').click(function() {
+  $('.message').hide();
+});
+
+$('.message__close--library').click(function() {
+  $(this).parents('.game__location').hide();
+  $('.game__location--second').fadeIn('fast');
+});
+
+$('.message__close--factory').click(function() {
+  $(this).parents('.game__location').hide();
+  $('.game__location--third').fadeIn('fast');
 });
