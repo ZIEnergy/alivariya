@@ -1,4 +1,4 @@
 $('.card-game__button').click(function(e) {
   e.preventDefault();
-  $('.card-game').fadeOut('fast');
+  $(this).parents('.card-game').fadeOut('fast');
 });

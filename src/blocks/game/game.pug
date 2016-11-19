@@ -1,11 +1,11 @@
 mixin game(additionalClass)
   .game(class=additionalClass)
     .game__objects
-    +card-game
     +game-popup
     .game__location-wrapper
       +slots('game__slots')
       .game__location.game__location--visible.game__location--first
+        +card-game--library
         .game__ingredients-container
           a.game__ingredient.game__ingredient--correct.game__ingredient--calendar(href="#", data-picture="item-calendar.png", data-slot="slots__item--calendar", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
           a.game__ingredient.game__ingredient--correct.game__ingredient--address(href="#", data-picture="item-address.png", data-slot="slots__item--address", data-header='Адрас півавара', data-text='(Завод "Аліварыя", вуліца Кісялёва, 30, Мінск) Канешне, без вопытных півавараў нічога не атрымаецца! Смак Каляд - справа тонкая.')
@@ -13,7 +13,9 @@ mixin game(additionalClass)
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--xerox(href="#", data-picture="item-xerox.png", data-header=" Капіравальная машына", data-text="Гэты агрэгат вам не спатрэбіцца - нельга скапіраваць смак каляд. Трэба стварыць свой, унікальны… Шукайце далей!")
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--book(href="#", data-picture="item-book.png", data-header="Кулінарная кніга", data-text="Рэч карысная. Але піва па кулінарным рэцэптам не зварыш… Шукайце далей!")
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--chair(href="#", data-picture="item-chair.png", data-header="Фатэль", data-text="Такі мяккі і ўтульны ... Але ў нас няма часу заседжвацца - трэба зварыць Каляднае піва да наступлення святаў!  Шукайце далей!")
+        +game-popup--library
       .game__location.game__location--hidden.game__location--second
+        +card-game--factory
         .game__ingredients-container
           a.game__ingredient.game__ingredient--correct.game__ingredient--shato(href="#", data-picture="item-shato.png", data-slot="slots__item--shato", data-header="Солад Шато Шакалад", data-text="Усё правільна: абсмажаны пры высокіх тэмпературах да цёмна-карычневага колеру,  гэты солад надае піву лёгкі арамат смажаных арэхаў і шакаладу.")
           a.game__ingredient.game__ingredient--correct.game__ingredient--malt(href="#", data-picture="item-malt.png", data-slot="slots__item--malt", data-header="Карамельны солад", data-text="Вашыя веды дзівяць! Сапраўды, карамельны солад дадаюць у калядны гатунак піва, каб узмацніць водар і надаць прыгожы колер напою.")
@@ -21,7 +23,9 @@ mixin game(additionalClass)
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--cacao(href="#", data-picture="item-cacao.png", data-header="Какава", data-text="Какаву лепш піць з малаком. А піва набывае шакаладны густ дзякуючы адмысловаму соладу. Шукайце далей!")
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--tangerines(href="#", data-picture="item-tangerines.png", data-header="Мандарыны", data-text="Святы - гэта не толькі мандарыны, пагадзіцеся. Не варта думаць стэрэатыпна. Шукайце далей!")
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--nuts(href="#", data-picture="item-nuts.png", data-header="Смажаныя арэхі", data-text="Водар смажаных арэхаў з'яўляецца ў піве дзякуючы спецыяльнай обжарке соладу. Шукайце далей!")
+        +game-popup--factory
       .game__location.game__location--hidden.game__location--third
+        +card-game--fair
         .game__ingredients-container
           a.game__ingredient.game__ingredient--correct.game__ingredient--star(href="#", data-picture="item-star.png", data-slot="slots__item--star", data-header="Прадчуванне цудаў", data-text="Пад Каляды ў цуды верыць прасцей. І яны сапраўды здараюцца!")
           a.game__ingredient.game__ingredient--correct.game__ingredient--sock(href="#", data-picture="item-sock.png", data-slot="slots__item--sock", data-header="Смак набліжаючыхся свят", data-text="Вы таксама яго адчуваеце? Цудоўна!")
@@ -29,3 +33,4 @@ mixin game(additionalClass)
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--shadow(href="#", data-picture="item-shadow.png", data-header="Сумныя думкі", data-text="Так не пойдзе! Якія яшчэ сумныя думкі перад Калядамі? Святло надыходзячых святаў абавязкова іх разгоніць.")
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--lamp(href="#", data-picture="item-lamp.png", data-header="Нуда", data-text="Каляды - не час сумаваць! Прыгоды і цёплыя бяседы знойдуць вас самі, варта толькі прыгледзецца!")
           a.game__ingredient.game__ingredient--incorrect.game__ingredient--puddle(href="#", data-picture="item-puddle.png", data-header="Дрэннае надвор'е", data-text="Памятаеце: дрэннага надвор'я не існуе! Бо прыгажосць у вачах таго, хто глядзіць. Шукайце далей!")
+        +game-popup--fair

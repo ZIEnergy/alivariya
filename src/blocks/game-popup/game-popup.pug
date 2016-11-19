@@ -5,3 +5,27 @@ mixin game-popup(additionalClass)
     .game-popup__header
     p.game-popup__text
     .game-popup__status.game-popup__status--key
+    
+mixin game-popup--library(additionalClass)
+  .game-popup.game-popup--library(class=additionalClass)
+    .game-popup__close
+    img.game-popup__picture(src="#", alt="Ingredient")
+    .game-popup__header
+    p.game-popup__text
+    .game-popup__status.game-popup__status--key
+    
+mixin game-popup--factory(additionalClass)
+  .game-popup.game-popup--factory(class=additionalClass)
+    .game-popup__close
+    img.game-popup__picture(src="#", alt="Ingredient")
+    .game-popup__header
+    p.game-popup__text
+    .game-popup__status.game-popup__status--key
+    
+mixin game-popup--fair(additionalClass)
+  .game-popup.game-popup--fair(class=additionalClass)
+    .game-popup__close
+    img.game-popup__picture(src="#", alt="Ingredient")
+    .game-popup__header
+    p.game-popup__text
+    .game-popup__status.game-popup__status--key
