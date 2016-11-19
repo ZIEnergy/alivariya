@@ -16,6 +16,18 @@ var resizeMe = function () {
     $("html").css("font-size", newFontSize);
 };
 
+//setInterval('alert("прошло 5 секунд")', 5000);
+
+var time = 0;
+
+function count() {
+  time = time+1;
+};
+
+function timer() {
+  setInterval(count, 60000);
+};
+
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
         $('<img/>')[0].src = this;

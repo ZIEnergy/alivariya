@@ -34,6 +34,7 @@ $('.game-popup__close').click(function(e) {
     $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
     if($('.game__location--third').is(':visible')) {
       $('.game').hide();
+      $('.win__result-number').text(time);
       $('.win').fadeIn('fast').css('display', 'flex');
     };
   };
