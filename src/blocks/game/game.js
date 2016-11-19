@@ -33,5 +33,5 @@ $('.game-popup__close').click(function(e) {
     $('.game__location--visible').hide();
     $('.game__location--hidden').first().removeClass('game__location--hidden').fadeIn('fast').addClass('game__location--visible');
     $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
-  }
+  };
 });
