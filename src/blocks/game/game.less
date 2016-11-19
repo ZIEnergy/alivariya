@@ -107,8 +107,12 @@
     opacity: 0;
     .transition;
     
-    &:hover {
+    &:hover, &--active {
       opacity: 1;
+    }
+    
+    &--active {
+      cursor: default;
     }
     
     
@@ -158,12 +162,12 @@
     }
     
     &--chair {
-      background: url(../img/game-chair.png) no-repeat;
+      background: url(../img/game-chair.jpg) no-repeat;
       background-size: cover;
       width: 44.2rem;
       height: 35.6rem;
-      top: 84.1rem;
-      left: 49.6rem;
+      top: 84rem;
+      left: 49.7rem;
     }
     
     &--xerox {

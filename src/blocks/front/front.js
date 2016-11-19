@@ -1,6 +1,7 @@
 $('.card__button').click(function(e) {
   e.preventDefault();
+  $('.socials--main').hide();
   $('.front').hide();
-  $('.game').fadeIn('fast');
+  $('.game').fadeIn('slow');
   timer();
 });
