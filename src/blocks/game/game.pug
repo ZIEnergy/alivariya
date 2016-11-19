@@ -1,7 +1,7 @@
 mixin game(additionalClass)
   .game(class=additionalClass)
     +game-popup
-    //.game__location.game__location--first
+    .game__location.game__location--first
       //+slots('game__slots')
       +card-game
       .game__ingredients-container
@@ -21,7 +21,7 @@ mixin game(additionalClass)
         a.game__ingredient.game__ingredient--correct.game__ingredient--tangerines(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
         a.game__ingredient.game__ingredient--correct.game__ingredient--nuts(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
         a.game__ingredient.game__ingredient--correct.game__ingredient--cacao(href="#", data-picture="item-calendar.png", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
-    .game__location.game__location--third
+    //.game__location.game__location--third
       //+slots('game__slots')
       +card-game
       .game__ingredients-container
