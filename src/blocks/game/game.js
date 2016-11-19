@@ -31,7 +31,7 @@ $('.game-popup__close').click(function(e) {
   $('.game-popup').fadeOut('fast');
   if(!$('.slots__item').hasClass("slots__item--empty")) {
     $('.game__location--visible').hide();
-    $('.game__location--hidden').first().fadeIn('fast').addClass('game__location--visible');
+    $('.game__location--hidden').first().removeClass('game__location--hidden').fadeIn('fast').addClass('game__location--visible');
     $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
   }
 });
