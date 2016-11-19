@@ -1,6 +1,8 @@
 .slots {
-  position: relative;
+  position: absolute;
   z-index: 4;
+  top: 7.8rem;
+  right: -5.3rem;
   
   &__item {
     width: 10.8rem;
@@ -9,23 +11,51 @@
     border-radius: 50%;
     display: block;
     
-    &:nth-child(n+2) {
-      margin-top: 6.6rem;
+    &:nth-child(2) {
+      margin-top: 6.1rem;
+    }
+    
+    &:nth-child(3) {
+      margin-top: 7rem;
+    }
+    
+    &--address {
+      background: url(../img/slot-address.png) no-repeat center;
+      background-size: 7.5rem 6.4rem;
+    }
+    
+    &--recipe {
+      background: url(../img/slot-recipe.png) no-repeat center;
+      background-size: 8.4rem 7.6rem;
+    }
+    
+    &--calendar {
+      background: url(../img/slot-calendar.png) no-repeat center;
+      background-size: 8.7rem 7.1rem;
     }
     
     &--malt {
       background: url(../img/slot-shato.png) no-repeat center;
-      background-size: contain;
     }
     
-    &--malt-caramel {
+    &--caramel {
       background: url(../img/slot-caramel.png) no-repeat center;
-      background-size: contain;
     }
     
     &--hop {
       background: url(../img/slot-hop.png) no-repeat center;
-      background-size: contain;
+    }
+    
+    &--malt {
+      background: url(../img/slot-shato.png) no-repeat center;
+    }
+    
+    &--caramel {
+      background: url(../img/slot-caramel.png) no-repeat center;
+    }
+    
+    &--hop {
+      background: url(../img/slot-hop.png) no-repeat center;
     }
   }
 }

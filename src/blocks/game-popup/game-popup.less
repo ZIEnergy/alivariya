@@ -15,8 +15,16 @@
   display: none;
   
   &__picture {
-    width: 19.4rem;
-    height: 19.3rem;
+    
+    &--correct {
+      width: 19.5rem;
+      height: 19.5rem
+    }
+    
+    &--incorrect {
+      width: 23rem;
+      height: 23rem;
+    }
   }
   
   &__header {
@@ -28,6 +36,7 @@
     margin-top: 4.5rem;
     max-width: 63.5rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
   
   &__text {

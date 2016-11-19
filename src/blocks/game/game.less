@@ -2,51 +2,52 @@
   display: none;
   width: 100%;
   height: 100%;
-  min-height: 144rem;
   background: url(../img/game-table.jpg) no-repeat;
   background-size: cover;
+  position: relative;
   
   &__objects {
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 85.4rem;
+    bottom: 0;
     left: 0;
-    overflow: hidden;
+    z-index: 3;
+    background: url(../img/game-objects.png) no-repeat;
+    background-size: cover;
+  }
+  
+  &__location-wrapper {
+    width: 201rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
   }
   
   &__location {
+    width: 100%;
+    height: 100%;
     
     &--first {
-      background: url(../img/library.jpg) no-repeat;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
+      background: url(../img/library.png) no-repeat;
+      background-size: 100% auto;
     }
     
     &--second {
-      background: url(../img/factory.jpg) no-repeat;
-//      background-size: cover;
-      width: 100%;
-      height: 100%;
+      background: url(../img/factory.png) no-repeat;
+      background-size: 100% auto;
+      display: none;
     }
     
     &--third {
-      background: url(../img/fair.jpg) no-repeat;
-//      background-size: cover;
+      background: url(../img/fair.png) no-repeat;
       background-size: 100% auto;
-      width: 100%;
-      height: 100%;
-//      width: 255rem;
-//      height: 144rem;
-//      min-height: 144rem;
+      display: none;
     }
   }
   
   &__slots {
-    position: absolute;
-    right: 20.9rem;
-    top: 7.5rem;
+    
   }
   
   &__chocolate {
@@ -120,7 +121,7 @@
       width: 10.8rem;
       height: 14.5rem;
       top: 46.9rem;
-      right: 35rem;
+      right: 8.8rem;
     }
     
     &--recipe {
@@ -128,8 +129,21 @@
       background-size: cover;
       width: 8.9rem;
       height: 12.7rem;
-      top: 87.4rem;
-      right: 112.1rem;
+      top: 87.6rem;
+      right: 85.8rem;
+    }
+    
+    &--address {
+      background: url(../img/game-address.png) no-repeat;
+      background-size: 5.2rem 5rem;
+      background-position: .7rem .1rem;
+      width: 9rem;
+      height: 7.5rem;
+      top: 11.5rem;
+      right: 66rem;
+      top: 115.4rem;
+      right: 103.5rem;
+      z-index: 8;
     }
     
     &--book {
@@ -137,9 +151,27 @@
       background-size: cover;
       width: 10.9rem;
       height: 5.9rem;
-      top: 92.3rem;
-      left: 112.1rem;
+      top: 92.2rem;
+      left: 84.2rem;
       z-index: 8;
+    }
+    
+    &--chair {
+      background: url(../img/game-chair.png) no-repeat;
+      background-size: cover;
+      width: 44.2rem;
+      height: 35.6rem;
+      top: 84.1rem;
+      left: 49.6rem;
+    }
+    
+    &--xerox {
+      background: url(../img/game-xerox.png) no-repeat;
+      background-size: cover;
+      width: 18.6rem;
+      height: 19.7rem;
+      top: 78.1rem;
+      right: 22.4rem;
     }
     
     &--cacao {
@@ -149,15 +181,6 @@
       height: 22.5rem;
       top: 78.6rem;
       right: 49.4rem;
-    }
-    
-    &--chair {
-      background: url(../img/game-chair.png) no-repeat;
-      background-size: cover;
-      width: 44.2rem;
-      height: 35.6rem;
-      top: 84rem;
-      left: 77.2rem;
     }
     
     &--hops {
@@ -257,19 +280,6 @@
       height: 5.1rem;
       top: 2.4rem;
       left: 157.7rem;
-    }
-    
-    &--xerox {
-      background: url(../img/game-xerox.png) no-repeat;
-      background-size: cover;
-      width: 18.6rem;
-      height: 19.7rem;
-      top: 78rem;
-      right: 48.8rem;
-    }
-    
-    &--address {
-      
     }
   }
 }
