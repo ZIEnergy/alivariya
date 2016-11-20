@@ -76,3 +76,13 @@ preload([
   'img/question-bg.jpg',
   'img/card-night.png',
 ]);
+
+
+$(".card__button").on("click", function () {
+  ga("send", "event", "main", "click", "start")
+});
+
+$(".socials__item").on("click", function () {
+  ga("send", "event", "socials", "click", "share")
+});
+

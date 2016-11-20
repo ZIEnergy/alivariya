@@ -29,6 +29,18 @@ $('.game__ingredient--incorrect').click(function(e) {
   $('.game-popup__picture').addClass('game-popup__picture--incorrect');
 });
 
+//function minute() {
+//  if (time.substring(time.length-1) == "1") {
+//    $('.win__result-text--minute').text('хвiлiну');
+//  }
+//  else if (time.substring(time.length-1) == "2"||time.substring(time.length-1) == "3"||time.substring(time.length-1) == "4") {
+//    $('.win__result-text--minute').text('хвiлiны');
+//  }
+//  else {
+//    $('.win__result-text--minute').text('хвiлiн');
+//  };
+//}
+
 $('.game-popup__close').click(function(e) {
   e.preventDefault();
   $('.game-popup').fadeOut('slow');
@@ -37,7 +49,9 @@ $('.game-popup__close').click(function(e) {
     if($('.game__location--third').is(':visible')) {
       $('.game').hide();
       $('.win__result-number').text(time);
+//      minute();
       $('.win').fadeIn('slow').css('display', 'flex');
+      $('.game__location--third').snowfall('clear');
       $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
     };
   };
@@ -53,11 +67,13 @@ $('.message__close').click(function(e) {
 $('.message__close--library').click(function(e) {
   e.preventDefault();
   $(this).parents('.game__location').hide();
+  $('.question').snowfall('clear');
   $('.game__location--second').fadeIn('slow');
 });
 
 $('.message__close--factory').click(function(e) {
   e.preventDefault();
   $(this).parents('.game__location').hide();
+  $('.game__location--third').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 10, maxSpeed : 10});
   $('.game__location--third').fadeIn('slow');
 });
