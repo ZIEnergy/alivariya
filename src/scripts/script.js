@@ -86,3 +86,7 @@ $(".socials__item").on("click", function () {
   ga("send", "event", "socials", "click", "share")
 });
 
+
+$(".socials--gold .socials__item").on("click", function () {
+  ga("send", "event", "socials", "click", "share-game")
+});

@@ -14,6 +14,9 @@ $('.game__ingredient').click(function(e) {
 $('.game__ingredient--correct').click(function(e) {
   e.preventDefault();
 //  flyToElement($(this), $('.slots__item--empty').first());
+//  setTimeout(function () {
+//    $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
+//  }, 1500);
   $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
   $('.game-popup__status').removeClass('game-popup__status--minus');
   $('.game-popup__status').addClass('game-popup__status--key');
@@ -51,7 +54,6 @@ $('.game-popup__close').click(function(e) {
       $('.win__result-number').text(time);
 //      minute();
       $('.win').fadeIn('slow').css('display', 'flex');
-      $('.game__location--third').snowfall('clear');
       $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
     };
   };
@@ -74,6 +76,5 @@ $('.message__close--library').click(function(e) {
 $('.message__close--factory').click(function(e) {
   e.preventDefault();
   $(this).parents('.game__location').hide();
-  $('.game__location--third').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 10, maxSpeed : 10});
   $('.game__location--third').fadeIn('slow');
 });
