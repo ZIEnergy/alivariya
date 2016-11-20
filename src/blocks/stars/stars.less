@@ -1,0 +1,51 @@
+.stars {
+  position: absolute;
+  left: 31.1rem;
+  top: 6.4rem;
+  background: url(../img/stars.png) no-repeat;
+  background-size: contain;
+  width: 62.1rem;
+  height: 35.1rem;
+  
+  &__item {
+    width: .1rem;
+    height: .1rem;
+    position: absolute;
+    box-shadow: 0 0 0 #fdfdfd;
+    animation: pulse1 3s infinite;
+    border-radius: 50%;
+    top: 7.2rem;
+    left: 9rem;
+    
+//    &:nth-child(1) {
+//      top: 7.2rem;
+//      left: 9rem;
+//    }
+//    
+//    &:nth-child(2) {
+//      top: 10.2rem;
+//      left: 43.5rem;
+//    }
+//    
+//    &:nth-child(3) {
+////      top: 7.2rem;
+////      left: 9rem;
+//    }
+//    
+//    &:nth-child(4) {
+////      top: 7.2rem;
+////      left: 9rem;
+//    }
+  }
+  @keyframes pulse1 {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0.1);
+    }
+    70% {
+      box-shadow: 0 0 0 5rem rgba(255,255,255, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(255,255,255, 0);
+    }
+  }
+}

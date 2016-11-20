@@ -16,7 +16,7 @@ var resizeMe = function () {
     $("html").css("font-size", newFontSize);
 };
 
-//setInterval('alert("прошло 5 секунд")', 5000);
+$('.question').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
 
 var time = 0;
 
@@ -31,16 +31,11 @@ function timer() {
 function preload(arrayOfImages) {
     $(arrayOfImages).each(function(){
         $('<img/>')[0].src = this;
-        // Alternatively you could use:
-        // (new Image()).src = this;
     });
 }
 
-// Usage:
-
 preload([
   'img/fair.png',
-  'img/texture.png',
   'img/library.png',
   'img/factory.png',
   'img/front-bg.jpg',
@@ -51,6 +46,6 @@ preload([
   'img/game-objects.png',
   'img/card.png',
   'img/envelope.png',
-  'img/question-bg.png',
+  'img/question-bg.jpg',
   'img/card-night.png',
 ]);

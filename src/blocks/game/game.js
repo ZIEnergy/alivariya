@@ -37,13 +37,16 @@ $('.game-popup__close').click(function(e) {
       $('.game').hide();
       $('.win__result-number').text(time);
       $('.win').fadeIn('slow').css('display', 'flex');
+      $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
     };
   };
 });
 
-$('.message__close').click(function() {
+$('.message__close').click(function(e) {
+  e.preventDefault();
   $('.message').hide();
-    $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
+  $('.game').addClass('game--blocked');
+  $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
 });
 
 $('.message__close--library').click(function() {

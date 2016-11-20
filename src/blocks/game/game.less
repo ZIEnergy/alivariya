@@ -6,6 +6,22 @@
   background-size: cover;
   position: relative;
   
+  &--blocked {
+    
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #000;
+      z-index: 80;
+      opacity: 0;
+    }
+  }
+  
   &__objects {
     position: absolute;
     width: 100%;
@@ -275,7 +291,7 @@
       width: 43.8rem;
       height: 20.2rem;
       top: 121.7rem;
-      right: 0rem;
+      right: 0;
     }
     
     &--lamp {
