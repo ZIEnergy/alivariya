@@ -6,13 +6,14 @@ $('.game__ingredient').click(function(e) {
   $('.game-popup__header').text($(this).data('header'));
   $('.game-popup__text--ingredient').text($(this).data('text'));
   $('.game-popup--ingredient').fadeIn('slow').css('display', 'flex');
-  if(!$('.slots__item').hasClass("slots__item--empty")) {
-    $(this).parents('.game__location').hide();
-  }
+//  setTimeout(function () {
+//    $('.game-popup--ingredient').fadeIn('slow').css('display', 'flex');
+//  }, 1500)
 });
 
 $('.game__ingredient--correct').click(function(e) {
   e.preventDefault();
+//  flyToElement($(this), $('.slots__item--empty').first());
   $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
   $('.game-popup__status').removeClass('game-popup__status--minus');
   $('.game-popup__status').addClass('game-popup__status--key');
@@ -49,12 +50,14 @@ $('.message__close').click(function(e) {
   $('.slots__item').removeClass().addClass('slots__item').addClass('slots__item--empty');
 });
 
-$('.message__close--library').click(function() {
+$('.message__close--library').click(function(e) {
+  e.preventDefault();
   $(this).parents('.game__location').hide();
   $('.game__location--second').fadeIn('slow');
 });
 
-$('.message__close--factory').click(function() {
+$('.message__close--factory').click(function(e) {
+  e.preventDefault();
   $(this).parents('.game__location').hide();
   $('.game__location--third').fadeIn('slow');
 });
