@@ -6,17 +6,10 @@ $('.game__ingredient').click(function(e) {
   $('.game-popup__header').text($(this).data('header'));
   $('.game-popup__text--ingredient').text($(this).data('text'));
   $('.game-popup--ingredient').fadeIn('slow').css('display', 'flex');
-//  setTimeout(function () {
-//    $('.game-popup--ingredient').fadeIn('slow').css('display', 'flex');
-//  }, 1500)
 });
 
 $('.game__ingredient--correct').click(function(e) {
   e.preventDefault();
-//  flyToElement($(this), $('.slots__item--empty').first());
-//  setTimeout(function () {
-//    $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
-//  }, 1500);
   $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
   $('.game-popup').removeClass('game-popup--incorrect');
   $('.game-popup').addClass('game-popup--correct');
