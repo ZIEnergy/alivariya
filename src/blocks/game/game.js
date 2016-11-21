@@ -18,18 +18,14 @@ $('.game__ingredient--correct').click(function(e) {
 //    $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
 //  }, 1500);
   $('.slots__item--empty').first().addClass($(this).data('slot')).removeClass('slots__item--empty');
-  $('.game-popup__status').removeClass('game-popup__status--minus');
-  $('.game-popup__status').addClass('game-popup__status--key');
-  $('.game-popup__picture').removeClass('game-popup__picture--incorrect');
-  $('.game-popup__picture').addClass('game-popup__picture--correct');
+  $('.game-popup').removeClass('game-popup--incorrect');
+  $('.game-popup').addClass('game-popup--correct');
 });
 
 $('.game__ingredient--incorrect').click(function(e) {
   e.preventDefault();
-  $('.game-popup__status').removeClass('game-popup__status--key');
-  $('.game-popup__status').addClass('game-popup__status--minus');
-  $('.game-popup__picture').removeClass('game-popup__picture--correct');
-  $('.game-popup__picture').addClass('game-popup__picture--incorrect');
+  $('.game-popup').removeClass('game-popup--correct');
+  $('.game-popup').addClass('game-popup--incorrect');
 });
 
 //function minute() {
