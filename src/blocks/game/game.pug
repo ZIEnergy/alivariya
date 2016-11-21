@@ -6,7 +6,9 @@ mixin game(additionalClass)
       +slots('game__slots')
       .game__location.game__location--first
         .game__animation
-          .game__animation-light.game__animation-light--library
+          .game__animation-tree
+          .game__animation-lantern.game__animation-lantern--1
+          .game__animation-lantern.game__animation-lantern--2
         +card-game--library
         .game__ingredients-container
           a.game__ingredient.game__ingredient--correct.game__ingredient--calendar(href="#", data-picture="item-calendar.png", data-slot="slots__item--calendar", data-header="Каляндар", data-text="Так! Калядны гатунак піва варта ствараць менавіта падчас Каляд, інакш напой пазбавіцца чароўнасці святочнага настрою.")
@@ -18,7 +20,11 @@ mixin game(additionalClass)
         +message--library
       .game__location.game__location--second
         .game__animation
-          .game__animation-light.game__animation-light--factory
+          .game__animation-lantern.game__animation-lantern--3
+          .game__animation-lantern.game__animation-lantern--4
+          .game__animation-lantern.game__animation-lantern--5
+          .game__animation-lantern.game__animation-lantern--6
+          .game__animation-fireplace
         +card-game--factory
         .game__ingredients-container
           a.game__ingredient.game__ingredient--correct.game__ingredient--shato(href="#", data-picture="item-shato.png", data-slot="slots__item--shato", data-header="Солад Шато Шакалад", data-text="Усё правільна: абсмажаны пры высокіх тэмпературах да цёмна-карычневага колеру, гэты солад надае піву лёгкі водар смажаных арэхаў і шакаладу.")
@@ -30,8 +36,7 @@ mixin game(additionalClass)
         +message--factory
       .game__location.game__location--third
         .game__animation
-          .game__animation-light.game__animation-light--fair
-          .game__animation-snow.game__animation-snow--fair
+          .game__animation-snow.game__animation-stars
         +card-game--fair
         .game__ingredients-container
           a.game__ingredient.game__ingredient--correct.game__ingredient--star(href="#", data-picture="item-star.png", data-slot="slots__item--star", data-header="Прадчуванне цудаў", data-text="Перад Калядамi верыць у цуды прасцей. І яны сапраўды здараюцца!")
