@@ -28,17 +28,19 @@ $('.game__ingredient--incorrect').click(function(e) {
   $('.game-popup').addClass('game-popup--incorrect');
 });
 
-//function minute() {
-//  if (time.substring(time.length-1) == "1") {
-//    $('.win__result-text--minute').text('хвiлiну');
-//  }
-//  else if (time.substring(time.length-1) == "2"||time.substring(time.length-1) == "3"||time.substring(time.length-1) == "4") {
-//    $('.win__result-text--minute').text('хвiлiны');
-//  }
-//  else {
-//    $('.win__result-text--minute').text('хвiлiн');
-//  };
-//}
+function minute() {
+  var timeNumber = $('.win__result-number').text();
+  if (timeNumber.substring(timeNumber.length-1) == "1") {
+    $('.win__result-text--minute').text('хвiлiну');
+  }
+  else if (timeNumber.substring(timeNumber.length-1) == "2"||timeNumber.substring(timeNumber.length-1) == "3"||timeNumber.substring(timeNumber.length-1) == "4") {
+    $('.win__result-text--minute').text('хвiлiны');
+  }
+  else {
+    $('.win__result-text--minute').text('хвiлiн');
+  };
+}
+
 
 $('.game-popup__close').click(function(e) {
   e.preventDefault();
@@ -48,7 +50,7 @@ $('.game-popup__close').click(function(e) {
     if($('.game__location--third').is(':visible')) {
       $('.game').hide();
       $('.win__result-number').text(time);
-//      minute();
+      minute();
       $('.win').fadeIn('slow').css('display', 'flex');
       $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
     };
