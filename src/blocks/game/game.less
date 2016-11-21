@@ -73,26 +73,80 @@
   }
   
   &__animation-tree {
-    width: 158.2rem;
-    height: 145.7rem;
-    transform: scale(.65);
+    width: 50em;
+    height: 70rem;
     position: absolute;
-    left: 11.6rem;
-    top: 7.5rem;
-    background: url(../img/animation-tree.png) no-repeat;
+    left: 76rem;
+    top: 32rem;
     background-size: cover;
-    animation: tree 4s infinite;
 
-    @keyframes tree {
+    @keyframes tree-light {
       0% {
         opacity: 1;
       }
       50% {
         opacity: .3;
+        transform: scale(1.1);
       }
       100% {
         opacity: 1;
       }
+    }
+  }
+  
+  &__animation-tree-light {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(circle 5rem at center, darken(#fdd573, 7%) 0%, transparent 100%);
+    
+    &:nth-child(1) {
+      top: 21.5rem;
+      left: 17rem;
+      animation: tree-light 1s infinite;
+    }
+    
+    &:nth-child(2) {
+      top: 18.5rem;
+      left: 29.7rem;
+      animation: tree-light 1.5s infinite;
+    }
+    
+    &:nth-child(3) {
+      top: 31.5rem;
+      left: 13rem;
+      animation: tree-light 1.2s infinite;
+    }
+    
+    &:nth-child(4) {
+      top: 30.5rem;
+      left: 34rem;
+      animation: tree-light 1.4s infinite;
+    }
+    
+    &:nth-child(5) {
+      top: 46rem;
+      left: 5.5rem;
+      animation: tree-light 1.2s infinite;
+    }
+    
+    &:nth-child(6) {
+      top: 45.5rem;
+      left: 22rem;
+      animation: tree-light 1.6s infinite;
+    }
+    
+    &:nth-child(7) {
+      top: 43.5rem;
+      left: 40.5rem;
+      animation: tree-light 1.7s infinite;
+    }
+    
+    &:nth-child(8) {
+      top: 53rem;
+      left: 10.5rem;
+      animation: tree-light 1.3s infinite;
     }
   }
   
@@ -103,7 +157,7 @@
     background-image: radial-gradient(circle 20rem at center, #fdd573 0%, transparent 100%);
     
     &--1 {
-      animation: lantern 7s infinite;
+      animation: lantern 3s infinite;
       top: 15rem;
       left: 3rem;
       transform: scale(.65);
@@ -205,6 +259,68 @@
       100% {
         opacity: 1;
       }
+    }
+  }
+  
+  &__animation-fair-lamps {
+    width: 75rem;
+    height: 30rem;
+    position: absolute;
+    top: 50rem;
+    left: 80rem;
+  }
+  
+  &__animation-fair-lamp {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border-radius: 50%;
+    background-image: radial-gradient(circle 5rem at center, darken(#fdd573, 8%) 0%, transparent 100%);
+    
+    &:nth-child(1) {
+      top: 5rem;
+      left: 5rem;
+      animation: tree-light .5s infinite;
+    }
+    
+    &:nth-child(2) {
+      top: 10rem;
+      left: 12rem;
+      animation: tree-light 1s infinite;
+    }
+    
+    &:nth-child(3) {
+      top: 14.5rem;
+      left: 21.5rem;
+      animation: tree-light .7s infinite;
+    }
+    
+    &:nth-child(4) {
+      top: 18rem;
+      left: 30rem;
+      animation: tree-light 1.2s infinite;
+    }
+    
+    &:nth-child(5) {
+      top: 20rem;
+      left: 40rem;
+      animation: tree-light .8s infinite;
+    }
+    
+    &:nth-child(6) {
+      top: 17.5rem;
+      left: 59rem;
+      animation: tree-light 1s infinite;
+    }
+    
+    &:nth-child(7) {
+      top: 14.5rem;
+      left: 66.5rem;
+      animation: tree-light .6s infinite;
+    }
+    
+    &:nth-child(8) {
+      display: none;
     }
   }
   

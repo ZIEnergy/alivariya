@@ -35,9 +35,9 @@ function preload(arrayOfImages) {
 }
 
 preload([
-  'img/fair.png',
-  'img/library.png',
-  'img/factory.png',
+  'img/fair.jpg',
+  'img/library.jpg',
+  'img/factory.jpg',
   'img/front-bg.jpg',
   'img/card-game.png',
   'img/animation-tree.png',
