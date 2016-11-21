@@ -14,4 +14,5 @@ $(".question__button--yes").click(function(e){e.preventDefault(),$(".question").
 
 
 
+
 function count(){time+=1}function timer(){setInterval(count,6e4)}function preload(i){$(i).each(function(){$("<img/>")[0].src=this})}$(function(){$(window).bind("resize",function(){resizeMe()}).trigger("resize")});var resizeMe=function(){var i=2550,n=10,e=$(window).width(),g=e/i,a=n*g;$("html").css("font-size",a)};$(".question").snowfall({image:"img/snowflake.png",minSize:10,maxSize:28,flakeCount:30,maxSpeed:10});var time=0;preload(["img/fair.png","img/library.png","img/factory.png","img/front-bg.jpg","img/card-game.png","img/win-bg.jpg","img/card-shadow.png","img/game-table.jpg","img/game-objects.png","img/card.png","img/envelope.png","img/question-bg.jpg","img/card-night.png"]),$(".card__button").on("click",function(){ga("send","event","main","click","start")}),$(".socials__item").on("click",function(){ga("send","event","socials","click","share")}),$(".socials--gold .socials__item").on("click",function(){ga("send","event","socials","click","share-game")});})
