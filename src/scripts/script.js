@@ -14,6 +14,10 @@ var resizeMe = function () {
       if(window.innerHeight < window.innerWidth){ 
         preferredWidth = 568;
       }
+      
+      if(window.innerHeight/window.innerWidth > .7){ 
+        preferredWidth = 480;
+      }
     }
     //Base font size for the page
     var fontsize = 10;
