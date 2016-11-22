@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><title>Калядны квэст</title><link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="css/style.css"><meta property="og:url" content="http://kalyadnae.redgraphic.org"><meta property="og:image" content="http://kalyadnae.redgraphic.org/img/share-win.jpg"><meta property="og:title" content="Я знайшоў сапраўдны смак Каляд!"><meta property="og:description" content="Далучайцеся і ўдзельнічайце ў святочным квэсце!"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@zhmurik"><meta name="twitter:title" content="Я знайшоў сапраўдны смак Каляд!"><meta name="twitter:description" content="Далучайцеся і ўдзельнічайце ў святочным квэсце!"><meta name="twitter:image" content="http://kalyadnae.redgraphic.org/img/share-win.jpg"><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0"><meta name="format-detection" content="telephone=no"><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-87692373-1', 'auto');
+ga('send', 'pageview');
+</script></head><body><div class="win"><div class="stars"><div class="stars__item"></div><div class="stars__item"></div><div class="stars__item"></div><div class="stars__item"></div></div><div class="win__objects"></div><a class="logo win__logo" href="http://www.alivaria.by/"></a><div class="win__header"></div><div class="win__result"> <div class="win__result-text">за </div><div class="win__result-number"></div><div class="win__result-text win__result-text--minute">хвiлiн</div></div><div class="win__text">вы знайшлі ўсе складнікі сапраўднага смаку Каляд – новага <br>піва «Калядная Ноч» з водарам шакаладу і надыходзячых свят ад «Аліварыя».</div><div class="socials socials--gold win__socials"><a class="socials__item socials__item--fb" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//kalyadnae.redgraphic.org"></a><a class="socials__item socials__item--vk" href="http://vk.com/share.php?url=http://kalyadnae.redgraphic.org"></a><a class="socials__item socials__item--twitter" href="https://twitter.com/share"></a><a class="socials__item socials__item--ok" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&amp;st.s=1&amp;st._surl=http://kalyadnae.redgraphic.org"></a></div><div class="win__text">Прапануйце сябрам даведацца, колькі часу <br>ім спатрэбіцца, каб адшукаць смак Каляд!</div></div><script type="text/javascript" src="js/jquery.min.js"></script><script type="text/javascript" src="js/plugins.js"></script><script type="text/javascript" src="js/script.js"></script><script>//window.onload = alert(localStorage.getItem("gameTime"));
+var gameTime = localStorage.getItem("gameTime")
+
+$('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+
+function minute() {
+  var timeNumber = $('.win__result-number').text();
+  if (timeNumber.substring(timeNumber.length-1) == "1") {
+    $('.win__result-text--minute').text('хвiлiну');
+  }
+  else if (timeNumber.substring(timeNumber.length-1) == "2"||timeNumber.substring(timeNumber.length-1) == "3"||timeNumber.substring(timeNumber.length-1) == "4") {
+    $('.win__result-text--minute').text('хвiлiны');
+  }
+  else {
+    $('.win__result-text--minute').text('хвiлiн');
+  };
+}
+
+
+$('.win__result-number').text(gameTime);
+minute();</script></body></html>

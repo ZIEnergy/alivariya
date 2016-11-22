@@ -21,32 +21,14 @@ $('.game__ingredient--incorrect').click(function(e) {
   $('.game-popup').addClass('game-popup--incorrect');
 });
 
-function minute() {
-  var timeNumber = $('.win__result-number').text();
-  if (timeNumber.substring(timeNumber.length-1) == "1") {
-    $('.win__result-text--minute').text('хвiлiну');
-  }
-  else if (timeNumber.substring(timeNumber.length-1) == "2"||timeNumber.substring(timeNumber.length-1) == "3"||timeNumber.substring(timeNumber.length-1) == "4") {
-    $('.win__result-text--minute').text('хвiлiны');
-  }
-  else {
-    $('.win__result-text--minute').text('хвiлiн');
-  };
-}
-
-
 $('.game-popup__close').click(function(e) {
   e.preventDefault();
   $('.game-popup').fadeOut('slow');
   if(!$('.slots__item').hasClass("slots__item--empty")) {
     $('.message').fadeIn('slow');
     if($('.game__location--third').is(':visible')) {
-      $('.game').hide();
-      $('.win__result-number').text(time);
-      minute();
-      $('.game__location--third').snowfall('clear');
-      $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
-      $('.win').fadeIn('slow').css('display', 'flex');
+      localStorage.setItem("gameTime",time);
+      window.location.href = "win.html";
     };
   };
 });
