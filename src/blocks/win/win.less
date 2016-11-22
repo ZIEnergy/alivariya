@@ -10,12 +10,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-//  display: none;
   overflow: hidden;
+  
+  @media screen and (max-width: @screen-md) {
+    padding-top: 1.1rem;
+    background: url(../img/win-mobile.jpg) no-repeat;
+    background-size: cover;
+  }
   
   &__logo {
     width: 25.8rem;
     height: 17.6rem;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 7.4rem;
+      height: 5.1rem;
+      flex: 0 0 auto;
+    }
   }
   
   &__header {
@@ -24,6 +35,14 @@
     background-size: cover;
     width: 35.5rem;
     height: 10.4rem;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 13.6rem;
+      height: 3.98rem;
+      margin: .9rem auto 0;
+      flex: 0 0 auto;
+      background-size: contain;
+    }
   }
   
   &__result {
@@ -31,6 +50,10 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+  
+    @media screen and (max-width: @screen-md) {
+      margin-bottom: 1rem;
+    }
   }
   
   &__result-number {
@@ -40,6 +63,12 @@
     color: #fff;
     font-size: 6.5rem;
     font-family: @font-fancy;
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin: 0 .5rem;
+    }
   }
   
   &__result-text {
@@ -47,10 +76,18 @@
     color: #fff;
     font-size: 6.5rem;
     font-family: @font-fancy;
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 2.6rem;
+    }
   }
   
   &__socials {
     margin: 6.1rem 0 4.4rem;
+  
+    @media screen and (max-width: @screen-md) {
+      margin: 2.5rem 0 2rem;
+    }
   }
   
   &__text {
@@ -63,6 +100,17 @@
     
     @media screen and (max-width: 1440px) {
       font-size: 3.2rem;
+    }
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      margin-top: 0;
+      max-width: 30rem;
+      
+      br {
+        display: none;
+      }
     }
   }
 }
