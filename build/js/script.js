@@ -6,7 +6,6 @@ function minute(){var e=$(".win__result-number").text();"1"==e.substring(e.lengt
 
 
 
-
 $(window).on("load",function(){$(".preloader").fadeOut("slow",function(){$(this).remove()})});
 $(".question__button--yes").click(function(e){e.preventDefault(),$(".question").snowfall("clear"),$(".question").hide(),$(".front").fadeIn("slow")});
 
@@ -15,4 +14,5 @@ $(".question__button--yes").click(function(e){e.preventDefault(),$(".question").
 
 
 
-function count(){time+=1}function timer(){setInterval(count,6e4)}function preload(i){$(i).each(function(){$("<img/>")[0].src=this})}$(function(){$(window).bind("resize",function(){resizeMe()}).trigger("resize")});var resizeMe=function(){var i=2550,n=10,e=$(window).width(),g=e/i,a=n*g;$("html").css("font-size",a)};$(".question").snowfall({image:"img/snowflake.png",minSize:10,maxSize:28,flakeCount:30,maxSpeed:10});var time=0;preload(["img/fair.jpg","img/library.jpg","img/factory.jpg","img/front-bg.jpg","img/card-game.png","img/animation-tree.png","img/win-bg.jpg","img/card-shadow.png","img/game-table.jpg","img/game-objects.png","img/card.png","img/envelope.png","img/question-bg.jpg","img/card-night.jpg","img/animation-fireplace.png"]),$(".card__button").on("click",function(){ga("send","event","main","click","start")}),$(".socials__item").on("click",function(){ga("send","event","socials","click","share")}),$(".socials--gold .socials__item").on("click",function(){ga("send","event","socials","click","share-game")});})
+
+function count(){time+=1}function timer(){setInterval(count,6e4)}function preload(i){$(i).each(function(){$("<img/>")[0].src=this})}$(function(){$(window).bind("resize",function(){resizeMe()}).trigger("resize")});var resizeMe=function(){var i=2550,n=10,e=$(window).width(),a=e/i,g=n*a;$("html").css("font-size",g)};$(".question").snowfall({image:"img/snowflake.png",minSize:10,maxSize:28,flakeCount:30,maxSpeed:10});var time=0;preload(["img/fair.jpg","img/library.jpg","img/factory.jpg","img/front-bg.jpg","img/card-game.png","img/win-bg.jpg","img/card-shadow.png","img/game-table.jpg","img/game-objects.png","img/card.png","img/question-bg.jpg","img/animation-fireplace.png"]),$(".card__button").on("click",function(){ga("send","event","main","click","start")}),$(".socials__item").on("click",function(){ga("send","event","socials","click","share")}),$(".socials--gold .socials__item").on("click",function(){ga("send","event","socials","click","share-game")});})

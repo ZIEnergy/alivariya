@@ -40,15 +40,12 @@ preload([
   'img/factory.jpg',
   'img/front-bg.jpg',
   'img/card-game.png',
-  'img/animation-tree.png',
   'img/win-bg.jpg',
   'img/card-shadow.png',
   'img/game-table.jpg',
   'img/game-objects.png',
   'img/card.png',
-  'img/envelope.png',
   'img/question-bg.jpg',
-  'img/card-night.jpg',
   'img/animation-fireplace.png',
 ]);
 
