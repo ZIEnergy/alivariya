@@ -14,6 +14,17 @@
   z-index: 9;
   display: none;
   
+  @media screen and (max-width: @screen-md) {
+    width: 46rem;
+    padding-top: 1.5rem;
+    transform: none;
+    left: auto;
+    top: auto;
+    padding: 1.5rem 0 1.5rem;
+    right: 0;
+    top: 5rem;
+  }
+  
   &__close {
     position: absolute;
     top: 2.1rem;
@@ -23,6 +34,13 @@
     width: 2.7rem;
     height: 2.7rem;
     cursor: pointer;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 2.2rem;
+      height: 2.2rem;
+      top: 1.7rem;
+      right: 1.7rem;
+    }
   }
   
   &__header {
@@ -36,6 +54,11 @@
     text-align: center;
     margin-bottom: 1rem;
     margin: 0 auto;
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 2.4rem;
+      line-height: normal;
+    }
   }
   
   &__text {
@@ -50,6 +73,13 @@
     
     @media screen and (max-width: 1440px) {
       font-size: 3rem;
+    }
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 1.6rem;
+      line-height: normal;
+      max-width: 32rem;
+      margin-top: 1rem;
     }
   }
 }

@@ -4,64 +4,131 @@
   top: 7.8rem;
   right: -5.3rem;
   
+  @media screen and (max-width: @screen-md) {
+    right: .7rem;
+    top: .7rem;
+    display: flex;
+    align-items: center;
+  }
+  
   &__item {
     width: 10.8rem;
     height: 10.8rem;
     border: 2px solid #ab821d;
     border-radius: 50%;
     display: block;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 3.8rem;
+      height: 3.8rem;
+    }
     
     &:nth-child(2) {
       margin-top: 6.1rem;
+  
+      @media screen and (max-width: @screen-md) {
+        margin-top: 0;
+        margin-left: 1rem;
+      }
     }
     
     &:nth-child(3) {
       margin-top: 7rem;
+  
+      @media screen and (max-width: @screen-md) {
+        margin-top: 0;
+        margin-left: 1rem;
+      }
     }
     
     &--address {
       background: url(../img/slot-address.png) no-repeat center;
       background-size: 7.5rem 6.4rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-address.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--recipe {
       background: url(../img/slot-recipe.png) no-repeat center;
       background-size: 8.4rem 7.6rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-recipe.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--calendar {
       background: url(../img/slot-calendar.png) no-repeat center;
       background-size: 8.7rem 7.1rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-calendar.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--shato {
       background: url(../img/slot-shato.png) no-repeat center;
       background-size: 9.3rem 7.5rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-shato.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--malt {
       background: url(../img/slot-malt.png) no-repeat center;
       background-size: 9.6rem 7.9rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-malt.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--hops {
       background: url(../img/slot-hops.png) no-repeat center;
       background-size: 9.4rem 7.7rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-hops.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--star {
       background: url(../img/slot-star.png) no-repeat center;
       background-size: 7rem 6.7rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-star.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--sock {
       background: url(../img/slot-sock.png) no-repeat center;
       background-size: 8.9rem 8.9rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-sock.png) no-repeat center;
+        background-size: contain;
+      }
     }
     
     &--sphere {
       background: url(../img/slot-sphere.png) no-repeat center;
       background-size: 6.7rem 6.7rem;
+  
+      @media screen and (max-width: @screen-md) {
+        background: #000 url(../img/slot-sphere.png) no-repeat center;
+        background-size: contain;
+      }
     }
   }
 }

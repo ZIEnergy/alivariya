@@ -6,8 +6,15 @@
   display: flex;
   justify-content: center;
   padding-top: 11rem;
+  z-index: 11;
   position: relative;
   display: none;
+  
+  @media screen and (max-width: @screen-md) {
+    background: url(../img/front-mobile.jpg) no-repeat;
+    background-size: cover;
+    padding-top: 3.4rem;
+  }
   
   &__content {
     display: flex;
@@ -22,6 +29,11 @@
     height: 19.4rem;
     background: url(../img/title.png) no-repeat;
     background-size: cover;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 21.4rem;
+      height: 8.2rem;
+    }
   }
   
   &__comment {
@@ -35,6 +47,13 @@
     
     @media screen and (max-width: 1440px) {
       font-size: 3.2rem;
+      margin-top: 1.3rem;
+    }
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      max-width: 25rem;
     }
   }
 }

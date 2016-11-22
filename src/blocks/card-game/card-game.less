@@ -12,6 +12,19 @@
   padding-top: 28.2rem;
   padding-right: 1.6rem;
   
+  @media screen and (max-width: @screen-md) {
+    width: 40.6rem;
+    height: 32rem;
+    height: 100%;
+    top: 0;
+    left: auto;
+    right: 2.7rem;
+    padding-top: 1.3rem;
+    padding-right: 0;
+    transform: none;
+    background-position: 0 -10.5rem;
+  }
+  
   &__text {
     color: #463930;
     font-family: @font-regular;
@@ -23,6 +36,12 @@
     
     @media screen and (max-width: 1440px) {
       font-size: 3rem;
+    }
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      max-width: 35rem;
     }
   }
   
@@ -38,6 +57,14 @@
     
     @media screen and (max-width: 1440px) {
       font-size: 3rem;
+    }
+  
+    @media screen and (max-width: @screen-md) {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-top: 1.6rem;
+      line-height: normal;
+      max-width: 35rem;
     }
   }
   
@@ -57,6 +84,13 @@
     height: 9.6rem;
     line-height: 9.6rem;
     .transition;
+  
+    @media screen and (max-width: @screen-md) {
+      top: 14.2rem;
+      width: 100%;
+      font-size: 2rem;
+      left: auto;
+    }
     
     &:hover {
       background-color: rgba(192, 169, 101, 0.15);

@@ -7,6 +7,14 @@ $(function () {
 var resizeMe = function () {
     //Standard width, for which the body font size is correct
     var preferredWidth = 2550;
+    
+    if ($(window).width() < 960) {
+      preferredWidth = 320;
+      
+      if(window.innerHeight < window.innerWidth){ 
+        preferredWidth = 568;
+      }
+    }
     //Base font size for the page
     var fontsize = 10;
 

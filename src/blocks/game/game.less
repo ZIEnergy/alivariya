@@ -32,6 +32,10 @@
     z-index: 3;
     background: url(../img/game-objects.png) no-repeat;
     background-size: cover;
+  
+    @media screen and (max-width: @screen-md) {
+      display: none;
+    }
   }
   
   &__location-wrapper {
@@ -39,6 +43,14 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 46rem;
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
   }
   
   &__location {
@@ -70,6 +82,10 @@
     top: 0;
     width: 100%;
     height: 100%;
+  
+    @media screen and (max-width: @screen-md) {
+      display: none;
+    }
   }
   
   &__animation-tree {
@@ -238,30 +254,6 @@
     }
   }
   
-//  &__animation-stars {
-//    width: 67.9rem;
-//    height: 33.8rem;
-//    transform: scale(.67);
-//    position: absolute;
-//    left: 89.7rem;
-//    top: -5.6rem;
-//    background: url(../img/animation-stars.png) no-repeat;
-//    background-size: cover;
-//    animation: stars 5.5s infinite;
-//
-//    @keyframes stars {
-//      0% {
-//        opacity: 1;
-//      }
-//      50% {
-//        opacity: .1;
-//      }
-//      100% {
-//        opacity: 1;
-//      }
-//    }
-//  }
-  
   &__animation-fair-lamps {
     width: 75rem;
     height: 30rem;
@@ -386,18 +378,20 @@
       opacity: 1;
       animation: none;
     }
-    
-    
-    
-//    @keyframes ingredient {
-//      0% {
-//        opacity: 0;
-//      }
-//      50% {
-//        opacity: 1;
-//      }
-//      100% {
-//        opacity: 0;
+  
+//    @media screen and (max-width: @screen-md) {
+//      animation: ingredient 3s infinite;
+//      
+//      @keyframes ingredient {
+//        0% {
+//          opacity: 0;
+//        }
+//        50% {
+//          opacity: 1;
+//        }
+//        100% {
+//          opacity: 0;
+//        }
 //      }
 //    }
     
@@ -417,6 +411,13 @@
       height: 14.5rem;
       top: 46.9rem;
       right: 8.8rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 10.7rem;
+        right: 2rem;
+        width: 2.5rem;
+        height: 3.36rem;
+      }
     }
     
     &--recipe {
@@ -426,6 +427,13 @@
       height: 12.7rem;
       top: 87.5rem;
       right: 86rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 20rem;
+        right: 19.65rem;
+        width: 2.06rem;
+        height: 2.94rem;
+      }
     }
     
     &--address {
@@ -436,6 +444,13 @@
       top: 115.3rem;
       right: 103.3rem;
       z-index: 8;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 26.35rem;
+        right: 23.65rem;
+        width: 2.06rem;
+        height: 1.71rem;
+      }
     }
     
     &--book {
@@ -446,6 +461,13 @@
       top: 92.2rem;
       left: 84.2rem;
       z-index: 8;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 21.1rem;
+        left: 19.3rem;
+        width: 2.52rem;
+        height: 1.37rem;
+      }
     }
     
     &--chair {
@@ -455,6 +477,13 @@
       height: 35.7rem;
       top: 84.2rem;
       left: 49.7rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 19.3rem;
+        left: 11.3rem;
+        width: 10.65rem;
+        height: 8.26rem;
+      }
     }
     
     &--xerox {
@@ -464,6 +493,14 @@
       height: 19.7rem;
       top: 78.1rem;
       right: 22.5rem;
+  
+      @media screen and (max-width: @screen-md) {
+        opacity: 1;
+        top: 17.8rem;
+        right: 5.1rem;
+        width: 4.3rem;
+        height: 4.56rem;
+      }
     }
     
     &--shato {
@@ -473,6 +510,13 @@
       height: 12.1rem;
       top: 81.2rem;
       right: 3.3rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 18.5rem;
+        right: .75rem;
+        width: 2.5rem;
+        height: 2.8rem;
+      }
     }
     
     &--malt {
@@ -482,6 +526,13 @@
       height: 12.3rem;
       top: 103.4rem;
       right: 60.8rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 23.6rem;
+        right: 13.9rem;
+        width: 3.22rem;
+        height: 2.85rem;
+      }
     }
     
     &--hops {
@@ -491,6 +542,13 @@
       height: 13.6rem;
       top: 99rem;
       left: 10.9rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 22.6rem;
+        left: 2.5rem;
+        width: 3.17rem;
+        height: 3.15rem;
+      }
     }
     
     &--cacao {
@@ -500,6 +558,13 @@
       height: 23.2rem;
       top: 78.2rem;
       right: 23.2rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 17.8rem;
+        right: 5.3rem;
+        width: 3.06rem;
+        height: 5.37rem;
+      }
     }
     
     &--tangerines {
@@ -509,6 +574,13 @@
       height: 7.8rem;
       top: 89.9rem;
       left: 24.4rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 20.5rem;
+        left: 5.58rem;
+        width: 2.62rem;
+        height: 1.81rem;
+      }
     }
     
     &--nuts {
@@ -518,6 +590,13 @@
       height: 13.3rem;
       top: 119.5rem;
       right: -.2rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 27.4rem;
+        right: 0rem;
+        width: 4.66rem;
+        height: 3.08rem;
+      }
     }
     
     &--sphere {
@@ -527,6 +606,13 @@
       height: 21.2rem;
       top: 59.5rem;
       left: 47.8rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 13.5rem;
+        left: 11rem;
+        width: 3.84rem;
+        height: 4.91rem;
+      }
     }
     
     &--star {
@@ -536,6 +622,13 @@
       height: 5.1rem;
       top: 2.6rem;
       left: 128.3rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: .6rem;
+        left: 29.4rem;
+        width: 1.25rem;
+        height: 1.18rem;
+      }
     }
     
     &--sock {
@@ -545,6 +638,13 @@
       height: 14.5rem;
       top: 34rem;
       right: 89.8rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 7.7rem;
+        right: 20.6rem;
+        width: 2.97rem;
+        height: 3.36rem;
+      }
     }
     
     &--puddle {
@@ -554,6 +654,13 @@
       height: 16.6rem;
       top: 119.3rem;
       left: 114.6rem;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 27.5rem;
+        left: 26.5rem;
+        width: 9.33rem;
+        height: 3.84rem;
+      }
     }
     
     &--shadow {
@@ -563,6 +670,13 @@
       height: 20.2rem;
       top: 121.7rem;
       right: 0;
+  
+      @media screen and (max-width: @screen-md) {
+        top: 27.9rem;
+        right: 0rem;
+        width: 10.14rem;
+        height: 4.68rem;
+      }
     }
     
     &--lamp {
@@ -572,6 +686,36 @@
       height: 3.6rem;
       top: 70rem;
       left: 132rem;
+  
+      @media screen and (max-width: @screen-md) {
+        opacity: 1;
+        top: 16rem;
+        left: 30.2rem;
+        width: .69rem;
+        height: .83rem;
+      }
+    }
+  }
+  
+  &__orientation {
+    display: none;
+  
+    @media screen and (max-width: @screen-md) {
+      background: url(../img/question-mobile.jpg) no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 90;
+      font-family: @font-fancy;
+      font-size: 2.8rem;
+      line-height: 3.6rem;
+      font-weight: 500;
+      color: #fff;
+      text-align: center;
+      padding-top: 12.7rem;
     }
   }
 }

@@ -1,11 +1,33 @@
 .warning {
   position: fixed;
   opacity: .5;
-  background: url(../img/warning.png) no-repeat ;
+  background: url(../img/warning.png) no-repeat;
   background-size: contain;
   height: 99%;
   width: 20rem;
   top: .7rem;
   left: .7rem;
   z-index: 9;
+  
+  @media screen and (max-width: @screen-md) {
+    background: url(../img/warning-mobile.png) no-repeat;
+    background-size: contain;
+    width: 99%;
+    height: 12rem;
+    top: auto;
+    opacity: 1;
+    bottom: 0;
+    left: .3rem;
+    z-index: 100;
+  }
+  
+  @media screen and (max-width: @screen-md) and (orientation:landscape) {
+    background: url(../img/warning-landscape.png) no-repeat;
+    background-size: contain;
+    left: 0;
+    top: .3rem;
+    bottom: auto;
+    height: 99%;
+    width: 12rem;
+  }
 }

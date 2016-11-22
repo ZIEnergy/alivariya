@@ -13,6 +13,14 @@
   padding: 4rem 7rem 0 0;
   z-index: 3;
   
+  @media screen and (max-width: @screen-md) {
+    position: static;
+    background: transparent;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  
   &__header {
     color: #fff;
     font-family: @font-fancy;
@@ -21,10 +29,23 @@
     position: relative;
     z-index: 3;
     text-shadow: 0 0 1.75rem rgba(0, 0, 0, 0.55);
+  
+    @media screen and (max-width: @screen-md) {
+      font-family: @font-regular;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
   }
   
   &__button {
     margin-top: 16rem;
     z-index: 3;
+  
+    @media screen and (max-width: @screen-md) {
+      width: 15.8rem;
+      height: 4.5rem;
+      font-size: 2.8rem;
+      margin-top: 1.5rem;
+    }
   }
 }
