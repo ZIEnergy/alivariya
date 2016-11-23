@@ -26,20 +26,22 @@
   }
   
   &__close {
-    position: absolute;
-    top: 2.1rem;
-    right: 1.9rem;
-    background: url(../img/close.svg) no-repeat;
-    background-size: cover;
-    width: 2.7rem;
-    height: 2.7rem;
-    cursor: pointer;
+    margin: 6.5rem auto 0;
+    background-color: #f1ebe2;
+    box-shadow: 0 0 1.75rem 0.05rem rgba(11, 18, 30, 0.1);
+    border: 0;
+    font-size: 4rem;
+    color: @color-gold;
+    
+    &:hover {
+      color: #fff;
+    }
   
     @media screen and (max-width: @screen-md) {
-      width: 2.2rem;
-      height: 2.2rem;
-      top: 1.7rem;
-      right: 1.7rem;
+      width: 20rem;
+      height: 5rem;
+      font-size: 2.6rem;
+      margin-top: 2rem;
     }
   }
   
@@ -52,7 +54,6 @@
     margin-top: 4.5rem;
     max-width: 63.5rem;
     text-align: center;
-    margin-bottom: 1rem;
     margin: 0 auto;
   
     @media screen and (max-width: @screen-md) {
@@ -64,12 +65,11 @@
   &__text {
     color: #463930;
     font-family: @font-regular;
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     line-height: 4.8rem;
     text-align: center;
     max-width: 65rem;
     margin: 0 auto;
-    margin-top: 3rem;
     
     @media screen and (max-width: 1440px) {
       font-size: 3rem;

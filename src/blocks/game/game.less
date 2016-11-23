@@ -235,7 +235,7 @@
     height: 99rem;
     transform: scale(.78);
     position: absolute;
-    left: 68.9rem;
+    left: 69.1rem;
     top: 38.5rem;
     background: url(../img/animation-fireplace.png) no-repeat;
     background-size: cover;
@@ -316,47 +316,6 @@
     }
   }
   
-  &__chocolate {
-    background: url(../img/game-chocolate.png) no-repeat;
-    background-size: cover;
-    width: 41.8rem;
-    height: 37.2rem;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  
-  &__hop-vertical {
-    background: url(../img/game-hop-vertical.png) no-repeat;
-    background-size: cover;
-    width: 24rem;
-    height: 54.7rem;
-    position: absolute;
-    left: 18.3rem;
-    bottom: 28.2rem;
-  }
-  
-  &__hop {
-    background: url(../img/game-hop.png) no-repeat;
-    background-size: cover;
-    width: 58.2rem;
-    height: 17rem;
-    position: absolute;
-    right: 18.7rem;
-    bottom: 0;
-  }
-  
-  &__bottle {
-    background: url(../img/game-bottle.png) no-repeat;
-    background-size: cover;
-    width: 31.9rem;
-    height: 85.4rem;
-    position: absolute;
-    right: 0;
-    top: 59.9rem;
-    z-index: 3;
-  }
-  
   &__ingredients-container {
     position: absolute;
     width: 100%;
@@ -372,7 +331,7 @@
     z-index: 5;
     opacity: 0;
     .transition;
-    animation: ingredient 3s infinite;
+//    animation: ingredient 3s infinite;
     
     &:hover, &--active {
       opacity: 1;
@@ -381,17 +340,17 @@
   
     @media screen and (max-width: @screen-md) {
       animation: ingredient 3s infinite;
+    }
       
-      @keyframes ingredient {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
+    @keyframes ingredient {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
       }
     }
     
@@ -508,11 +467,11 @@
       width: 10.8rem;
       height: 12.1rem;
       top: 81.2rem;
-      right: 3.3rem;
+      right: 3.2rem;
   
       @media screen and (max-width: @screen-md) {
-        top: 18.5rem;
-        right: .75rem;
+        top: 18.6rem;
+        right: .72rem;
         width: 2.5rem;
         height: 2.8rem;
       }
@@ -521,16 +480,16 @@
     &--malt {
       background: url(../img/game-malt.png) no-repeat;
       background-size: cover;
-      width: 13.9rem;
-      height: 12.3rem;
-      top: 103.4rem;
-      right: 60.8rem;
+      width: 11.3rem;
+      height: 12.2rem;
+      top: 103.6rem;
+      right: 60.9rem;
   
       @media screen and (max-width: @screen-md) {
-        top: 23.6rem;
+        top: 23.8rem;
         right: 13.9rem;
-        width: 3.22rem;
-        height: 2.85rem;
+        width: 2.62rem;
+        height: 2.82rem;
       }
     }
     
@@ -556,7 +515,7 @@
       width: 13.2rem;
       height: 23.2rem;
       top: 78.2rem;
-      right: 23.2rem;
+      right: 23.0rem;
   
       @media screen and (max-width: @screen-md) {
         top: 17.8rem;
@@ -569,32 +528,32 @@
     &--tangerines {
       background: url(../img/game-tangerines.png) no-repeat;
       background-size: cover;
-      width: 11.3rem;
-      height: 7.8rem;
-      top: 89.9rem;
-      left: 24.4rem;
+      width: 8.3rem;
+      height: 5.4rem;
+      top: 62.6rem;
+      left: 44.3rem;
   
       @media screen and (max-width: @screen-md) {
-        top: 20.5rem;
-        left: 5.58rem;
-        width: 2.62rem;
-        height: 1.81rem;
+        top: 14.35rem;
+        left: 10.1rem;
+        width: 1.92rem;
+        height: 1.25rem;
       }
     }
     
     &--nuts {
       background: url(../img/game-nuts.png) no-repeat;
       background-size: cover;
-      width: 20.2rem;
-      height: 13.3rem;
-      top: 119.5rem;
-      right: -.2rem;
+      width: 12.5rem;
+      height: 5.2rem;
+      top: 92.6rem;
+      left: 25.7rem;
   
       @media screen and (max-width: @screen-md) {
-        top: 27.4rem;
-        right: 0rem;
-        width: 4.66rem;
-        height: 3.08rem;
+        top: 21.2rem;
+        left: 5.8rem;
+        width: 2.89rem;
+        height: 1.2rem;
       }
     }
     
@@ -617,16 +576,17 @@
     &--star {
       background: url(../img/game-star.png) no-repeat;
       background-size: cover;
-      width: 5.4rem;
-      height: 5.1rem;
-      top: 2.6rem;
-      left: 128.3rem;
+      width: 13.3rem;
+      height: 11.7rem;
+      top: 0rem;
+      left: 126.2rem;
+      animation: ingredient 4s infinite;
   
       @media screen and (max-width: @screen-md) {
-        top: .6rem;
-        left: 29.4rem;
-        width: 1.25rem;
-        height: 1.18rem;
+        top: 0rem;
+        left: 28.8rem;
+        width: 3.08rem;
+        height: 2.71rem;
       }
     }
     
@@ -634,15 +594,15 @@
       background: url(../img/game-sock.png) no-repeat;
       background-size: cover;
       width: 12.9rem;
-      height: 14.5rem;
-      top: 34rem;
-      right: 89.8rem;
+      height: 17.9rem;
+      top: 33.9rem;
+      right: 89.9rem;
   
       @media screen and (max-width: @screen-md) {
-        top: 7.7rem;
-        right: 20.6rem;
-        width: 2.97rem;
-        height: 3.36rem;
+        top: 7.75rem;
+        right: 20.55rem;
+        width: 2.99rem;
+        height: 4.14rem;
       }
     }
     
@@ -652,7 +612,7 @@
       width: 40.3rem;
       height: 16.6rem;
       top: 119.3rem;
-      left: 114.6rem;
+      left: 114.9rem;
   
       @media screen and (max-width: @screen-md) {
         top: 27.5rem;
@@ -665,16 +625,16 @@
     &--shadow {
       background: url(../img/game-shadow.png) no-repeat;
       background-size: cover;
-      width: 43.8rem;
-      height: 20.2rem;
-      top: 121.7rem;
-      right: 0;
+      width: 40.2rem;
+      height: 18.3rem;
+      top: 93.7rem;
+      right: 48.5rem;
   
       @media screen and (max-width: @screen-md) {
-        top: 27.9rem;
-        right: 0rem;
-        width: 10.14rem;
-        height: 4.68rem;
+        top: 21.4rem;
+        right: 11rem;
+        width: 9.31rem;
+        height: 4.24rem;
       }
     }
     
