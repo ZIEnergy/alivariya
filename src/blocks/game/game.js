@@ -49,6 +49,12 @@ $('.message__close--library').click(function(e) {
 $('.message__close--factory').click(function(e) {
   e.preventDefault();
   $(this).parents('.game__location').hide();
-  $('.game__location--third').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+
+  if ($(window).width() < 900) {
+    $('.game__location--third').snowfall({image :"img/snowflake.png", minSize: 5, maxSize: 15, flakeCount : 10, maxSpeed : 5});
+  }
+  else {
+    $('.game__location--third').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+  }
   $('.game__location--third').fadeIn('slow');
 });

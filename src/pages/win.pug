@@ -6,10 +6,10 @@ html(lang='en')
     title Калядны квэст
     link(rel='shortcut icon', href="img/favicon.ico", type="image/x-icon")
     link(rel='stylesheet', href='css/style.css')
-    meta(property='og:url', content='http://kalyadnae.redgraphic.org')
+    meta(property='og:url', content='http://kalyadnae.redgraphic.org/win.html')
     meta(property='og:image', content='http://kalyadnae.redgraphic.org/img/share-win.jpg')
     meta(property='og:title', content='Я знайшоў сапраўдны смак Каляд!')
-    meta(property='og:description', content='Далучайцеся і ўдзельнічайце ў святочным квэсце!')
+    meta(property='og:description', content='Далучайцеся і ўдзельнічайце ў святочным квэсце!test')
     meta(name='twitter:card', content='summary')
     meta(name='twitter:site', content='@zhmurik')
     meta(name='twitter:title', content='Я знайшоў сапраўдны смак Каляд!')
@@ -19,6 +19,10 @@ html(lang='en')
     meta(name="format-detection", content="telephone=no")
     meta(name='mobile-web-app-capable', content='yes')
     meta(name='apple-mobile-web-app-capable', content='yes')
+    script.
+      if( localStorage.getItem("gameTime") === null || localStorage.getItem("gameTime") == "" ) {
+        window.location.href = "index.html";
+      }
     script.
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,11 +36,19 @@ html(lang='en')
   body
     +win
     include ../templates/scripts.pug
+    
     script.
-      //window.onload = alert(localStorage.getItem("gameTime"));
-      var gameTime = localStorage.getItem("gameTime")
+      var gameTime = localStorage.getItem("gameTime");
+      if (gameTime === 'undefined' || gameTime ==='null') {
+        gameTime = 0;
+      }
 
-      $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+      if ($(window).width() < 900) {
+        $('.win').snowfall({image :"img/snowflake.png", minSize: 5, maxSize: 15, flakeCount : 10, maxSpeed : 5});
+      }
+      else {
+        $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+      }
 
       function minute() {
         var timeNumber = $('.win__result-number').text();

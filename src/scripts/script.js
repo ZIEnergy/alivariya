@@ -8,14 +8,14 @@ var resizeMe = function () {
     //Standard width, for which the body font size is correct
     var preferredWidth = 2550;
     
-    if ($(window).width() < 960) {
+    if ($(window).width() < 900) {
       preferredWidth = 320;
       
       if(window.innerHeight < window.innerWidth){ 
         preferredWidth = 568;
       }
       
-      if(window.innerHeight/window.innerWidth > .7){ 
+      if(window.innerWidth/window.innerHeight > 0.7 && window.innerHeight > window.innerWidth){ 
         preferredWidth = 480;
       }
     }
@@ -28,7 +28,18 @@ var resizeMe = function () {
     $("html").css("font-size", newFontSize);
 };
 
-$('.question').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+    
+if ($(window).width() < 737) {
+  document.documentElement.requestFullScreen();
+};
+
+if ($(window).width() < 900) {
+  $('.question').snowfall({image :"img/snowflake.png", minSize: 5, maxSize: 15, flakeCount : 10, maxSpeed : 5});
+}
+else {
+  $('.question').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
+}
+
 
 var time = 0;
 
