@@ -5,6 +5,7 @@ $('.game__ingredient').click(function(e) {
   $('.game-popup__picture').attr('src', 'img/' + $(this).data('picture'));
   $('.game-popup__header').text($(this).data('header'));
   $('.game-popup__text--ingredient').text($(this).data('text'));
+  window.scrollTo(0, 0);
   $('.game-popup--ingredient').fadeIn('slow').css('display', 'flex');
 });
 
@@ -25,6 +26,7 @@ $('.game-popup__close').click(function(e) {
   e.preventDefault();
   $('.game-popup').fadeOut('slow');
   if(!$('.slots__item').hasClass("slots__item--empty")) {
+    window.scrollTo(0, 0);
     $('.message').fadeIn('slow');
     if($('.game__location--third').is(':visible')) {
       localStorage.setItem("gameTime",time);
