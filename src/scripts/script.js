@@ -28,11 +28,6 @@ var resizeMe = function () {
     $("html").css("font-size", newFontSize);
 };
 
-    
-if ($(window).width() < 737) {
-  document.documentElement.requestFullScreen();
-};
-
 if ($(window).width() < 900) {
   $('.question').snowfall({image :"img/snowflake.png", minSize: 5, maxSize: 15, flakeCount : 10, maxSpeed : 5});
 }
@@ -85,3 +80,7 @@ $(".socials__item").on("click", function () {
 $(".socials--gold .socials__item").on("click", function () {
   ga("send", "event", "socials", "click", "share-game")
 });
+    
+if ($(window).width() < 737) {
+  document.documentElement.requestFullScreen();
+};

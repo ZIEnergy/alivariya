@@ -34,13 +34,16 @@ html(lang='en')
   include ../templates/blocks.pug
   
   body
+    .unp
+    .warning
     +win
     include ../templates/scripts.pug
     
     script.
       var gameTime = localStorage.getItem("gameTime");
-      if (gameTime === 'undefined' || gameTime ==='null') {
-        gameTime = 0;
+      
+      if( localStorage.getItem("gameTime") === null || localStorage.getItem("gameTime") == "" ) {
+        window.location.href = "index.html";
       }
 
       if ($(window).width() < 900) {
