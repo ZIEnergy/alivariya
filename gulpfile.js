@@ -20,6 +20,7 @@ gulp.task('build', [
     'fonts',
     'images',
     'scripts:jquery',
+    'scripts:php',
     'scripts:plugins',
     'scripts',
     'templates',
@@ -62,6 +63,11 @@ gulp.task('fonts', function () {
 gulp.task('scripts:jquery', function () {
   gulp.src('./src/scripts/jquery.min.js')
     .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('scripts:php', function () {
+  gulp.src('./src/scripts/*.php')
+    .pipe(gulp.dest('./build'));
 });
 
 gulp.task('scripts:plugins', function () {

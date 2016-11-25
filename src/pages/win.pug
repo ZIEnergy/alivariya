@@ -4,6 +4,7 @@ html(lang='en')
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=Edge")
     title Калядны квэст
+    script(src='http://connect.facebook.net/en_US/all.js')
     link(rel='shortcut icon', href="img/favicon.ico", type="image/x-icon")
     link(rel='stylesheet', href='css/style.css')
     meta(property='og:url', content='http://kalyadnae.redgraphic.org/win.html')
@@ -52,20 +53,44 @@ html(lang='en')
       else {
         $('.win').snowfall({image :"img/snowflake.png", minSize: 10, maxSize: 28, flakeCount : 30, maxSpeed : 10});
       }
-
-      function minute() {
-        var timeNumber = $('.win__result-number').text();
-        if (timeNumber.substring(timeNumber.length-1) == "1") {
-          $('.win__result-text--minute').text('хвiлiну');
-        }
-        else if (timeNumber.substring(timeNumber.length-1) == "2"||timeNumber.substring(timeNumber.length-1) == "3"||timeNumber.substring(timeNumber.length-1) == "4") {
-          $('.win__result-text--minute').text('хвiлiны');
-        }
-        else {
-          $('.win__result-text--minute').text('хвiлiн');
-        };
+      
+      function minuteText() {
+          var timeNumber = gameTime;
+          if (timeNumber.substring(timeNumber.length - 1) == "1") {
+             return 'хвiлiну';
+          } else if (timeNumber.substring(timeNumber.length - 1) == "2" || timeNumber.substring(timeNumber.length - 1) == "3" || timeNumber.substring(timeNumber.length - 1) == "4") {
+              return 'хвiлiны';
+          } else {
+              return 'хвiлiн';
+          };
       }
 
 
-      $('.win__result-number').text(gameTime);
-      minute();
+      $.ajax({
+        url: 'ajax.php',
+        type: 'post',
+        data: {data: {time: gameTime}},
+      })
+      .done(function(data){
+        data = JSON.parse(data);
+        if(data.success){
+          var title = "Я знайшоў сапраўдны смак Каляд за " + gameTime + " " + minuteText() + "!";
+          var description = "Я знайшоў сапраўдны смак Каляд за " + gameTime + " " + minuteText() + "! І ўвайшоў у ТОП-" + data.message + " удзельнікаў квэста! Праверце свае сілы ў святочнай гульні!";
+
+          document.title = title;
+          $('.win__top').text('Вы ўвайшлі ў топ-' + data.message + ' удзельнікаў квэста!')
+          $('meta[property="og:title"]').attr('content', title);
+          $('meta[name="twitter:title"]').attr('content', title);
+
+          $('meta[name="description"]').attr('content', description);
+          $('meta[property="og:description"]').attr('content', description);
+          $('meta[name="twitter:description"]').attr('content', description);
+        } else {
+        }
+      })
+      .fail(function(){});
+
+
+      $('.win__result-number').text(gameTime);      
+      
+      $('.win__result-text--minute').text(minuteText());

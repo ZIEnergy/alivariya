@@ -80,7 +80,81 @@ $(".socials__item").on("click", function () {
 $(".socials--gold .socials__item").on("click", function () {
   ga("send", "event", "socials", "click", "share-game")
 });
+
+var Share = {
+    vkontakte: function(purl, ptitle, pimg, text) {
+        url = 'http://vkontakte.ru/share.php?';
+        url += 'url=' + encodeURIComponent(purl);
+        url += '&title=' + encodeURIComponent(ptitle);
+        url += '&description=' + encodeURIComponent(text);
+        url += '&image=' + encodeURIComponent(pimg);
+        url += '&noparse=true';
+        Share.popup(url);
+    },
+    facebook: function(purl, ptitle, pimg, text) {
+        FB.init({
+            appId: 742453755906695,
+            status: true,
+            cookie: true
+        });
+
+        FB.ui({
+            display: 'popup',
+            method: 'share',
+            name: ptitle,
+            link: purl,
+            href: purl,
+            picture: pimg,
+            // caption: '',
+            description: text,
+            // message: ''
+        });
+    },
+    odnoklassniki: function(purl, ptitle, pimg, text) {
+        url  = 'http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1';
+		url += '&st.comments=' + encodeURIComponent(text);
+		url += '&st._surl='    + encodeURIComponent(location.href);
+
+        Share.popup(url);
+    },
+    twitter: function(purl, ptitle, pimg, text) {
+        url  = 'https://twitter.com/share';
+		url += '?url=' + escape(window.location.href);
+		url += '&text=' + encodeURIComponent(text);
+
+        Share.popup(url);
+    },
+
+
+    popup: function(url) {
+        window.open(url, '', 'toolbar=0,status=0,width=626,height=436');
+    }
+};
+
+
+
+$(document).on("click", ".socials__item", function(e) {
+    e.preventDefault();
+
+    var loc = location.href;
+	var title = document.title;
+	var description = $('meta[property="og:description"]').attr('content');;
+    var image = $('meta[property="og:image"]').attr('content');
+
+    if($(this).hasClass('socials__item--vk'))
+    	Share.vkontakte(loc, title, image, description);
+
+    if($(this).hasClass('socials__item--fb'))
+    	Share.facebook(loc, title, image, description);
+
+    if($(this).hasClass('socials__item--twitter'))
+    	Share.twitter(loc, title, image, description);
+
+    if($(this).hasClass('socials__item--ok'))
+    	Share.odnoklassniki(loc, title, image, description);
+});
     
 if ($(window).width() < 737) {
   document.documentElement.requestFullScreen();
 };
+
